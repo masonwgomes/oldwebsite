@@ -1,0 +1,978 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+@keyframes glitchtext {
+  0% {
+    text-shadow: 3px 0 0 rgba(255, 0, 0, 1), -3px 0 0 rgba(0, 255, 255, 1);
+  }
+  20% {
+    text-shadow: 0 0 0 rgba(255, 0, 0, 1), -3px -1px 0 rgba(0, 255, 255, 1);
+  }
+  40% {
+    text-shadow: -3px -2px 0 rgba(255, 0, 0, 1), 2px 1px 0 rgba(0, 255, 255, 1);
+  }
+  60% {
+    text-shadow: -1px 2px 0 rgba(255, 0, 0, 1), 0 0 0 rgba(0, 255, 255, 1);
+  }
+  80% {
+    text-shadow: 2px -1px 0 rgba(255, 0, 0, 1), 3px 2px 0 rgba(0, 255, 255, 1);
+  }
+  100% {
+    text-shadow: 3px 0 0 rgba(255, 0, 0, 1), -3px 0 0 rgba(0, 255, 255, 1);
+  }
+}
+
+@keyframes glitchsvg {
+  0% {
+    filter: drop-shadow(3px 0 0 rgba(255, 0, 0, 1))
+      drop-shadow(-3px 0 0 rgba(0, 255, 255, 1));
+  }
+  20% {
+    filter: drop-shadow(0 0 0 rgba(255, 0, 0, 1))
+      drop-shadow(-3px -2px 0 rgba(0, 255, 255, 1));
+  }
+  40% {
+    filter: drop-shadow(-3px -3px 0 rgba(255, 0, 0, 1))
+      drop-shadow(3px 2px 0 rgba(0, 255, 255, 1));
+  }
+  60% {
+    filter: drop-shadow(-2px 3px 0 rgba(255, 0, 0, 1))
+      drop-shadow(0 0 0 rgba(0, 255, 255, 1));
+  }
+  80% {
+    filter: drop-shadow(3px -2px 0 rgba(255, 0, 0, 1))
+      drop-shadow(3px 3px 0 rgba(0, 255, 255, 1));
+  }
+  100% {
+    filter: drop-shadow(2px 0 0 rgba(255, 0, 0, 1))
+      drop-shadow(-3px 0 0 rgba(0, 255, 255, 1));
+  }
+}
+
+@keyframes glitchTitle {
+  0% {
+    text-shadow: 5px 0 0 rgba(255, 0, 0, 1), -5px 0 0 rgba(0, 255, 255, 1);
+  }
+  20% {
+    text-shadow: 0 0 0 rgba(255, 0, 0, 1), -5px -4px 0 rgba(0, 255, 255, 1);
+  }
+  40% {
+    text-shadow: -5px -4px 0 rgba(255, 0, 0, 1), 5px 4px 0 rgba(0, 255, 255, 1);
+  }
+  60% {
+    text-shadow: -4px 5px 0 rgba(255, 0, 0, 1), 0 0 0 rgba(0, 255, 255, 1);
+  }
+  80% {
+    text-shadow: 5px -4px 0 rgba(255, 0, 0, 1), 5px 4px 0 rgba(0, 255, 255, 1);
+  }
+  100% {
+    text-shadow: 5px 0 0 rgba(255, 0, 0, 1), -5px 0 0 rgba(0, 255, 255, 1);
+  }
+}
+
+body {
+  background-color: rgb(41, 41, 41);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.heroContainer {
+  background-image: url(planet\ bg.png);
+  background-size: cover;
+  height: 92.5vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: left;
+}
+
+.heroContent {
+  border-radius: 20px 0 0 20px;
+  color: white;
+  font-size: 35px;
+  padding: 10px 200px 10px 10px;
+  background-color: rgb(41, 41, 41);
+  margin-bottom: 350px;
+}
+
+.heroTitle {
+  font-size: 5rem;
+  font-weight: 600;
+  animation: glitchTitle 8000ms linear infinite;
+  display: block;
+  margin-left: 20px;
+  width: 750px;
+}
+
+.heroSubtitle {
+  margin-bottom: 20px;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.bioContainer {
+  text-align: center;
+  margin: 75px 500px 100px 500px;
+}
+
+.bioTitle {
+  font-size: 50px;
+  color: white;
+  text-shadow: 3px -1px 0 rgb(255, 0, 0), -3px 2px 0 rgba(0, 255, 255, 1);
+}
+
+.bioDescription {
+  font-size: 25px;
+  color: white;
+  margin: 50px 0px 50px 0px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.bioButton {
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 12px;
+  color: black;
+  background-color: white;
+  font-weight: bold;
+}
+
+.bioButton:hover {
+  color: white;
+  background-color: darkgray;
+  font-weight: bold;
+  animation: glitchsvg 1000ms none infinite;
+}
+
+#work {
+  scroll-behavior: smooth;
+}
+
+.workTitle {
+  font-size: 50px;
+  color: white;
+  text-shadow: 3px -1px 0 rgb(255, 0, 0), -3px 2px 0 rgba(0, 255, 255, 1);
+  text-align: center;
+}
+
+.matchboxContainer {
+  margin-top: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectTitle {
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  text-shadow: 5px -2px 0 rgb(255, 0, 0), -5px 2px 0 rgba(0, 255, 255, 1);
+}
+
+.pastaMatchbox {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pastaMatchbox img {
+  width: 500px;
+  height: auto;
+}
+
+.pastaMatchbox:hover img {
+  filter: brightness(25%);
+  transition: 0.5s ease-in-out;
+}
+
+.pastaMatchbox:hover .overlay {
+  opacity: 1;
+}
+
+.pastaMatchboxText {
+  color: white;
+  font-size: 40px;
+  position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  bottom: 50%;
+  right: 0;
+}
+
+.anubisMatchbox {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.anubisMatchbox img {
+  width: auto;
+  height: 500px;
+}
+
+.anubisMatchbox:hover img {
+  filter: brightness(25%);
+  transition: 0.5s ease-in-out;
+}
+
+.anubisMatchbox:hover .overlay {
+  opacity: 1;
+}
+
+.anubisMatchboxText {
+  color: white;
+  font-size: 40px;
+  position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ferrariMatchbox {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ferrariMatchbox img {
+  width: auto;
+  height: 500px;
+}
+
+.ferrariMatchbox:hover img {
+  filter: brightness(25%);
+  transition: 0.5s ease-in-out;
+}
+
+.ferrariMatchbox:hover .overlay {
+  opacity: 1;
+}
+
+.ferrariMatchboxText {
+  color: white;
+  font-size: 40px;
+  position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.posterContainer {
+  margin-top: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hughesPoster {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hughesPoster img {
+  width: auto;
+  height: 500px;
+}
+
+.hughesPoster:hover img {
+  filter: brightness(25%);
+  transition: 0.5s ease-in-out;
+}
+
+.hughesPoster:hover .overlay {
+  opacity: 1;
+}
+
+.hughesPosterText {
+  color: white;
+  font-size: 40px;
+  position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.gaslyPoster {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gaslyPoster img {
+  width: auto;
+  height: 500px;
+}
+
+.gaslyPoster:hover img {
+  filter: brightness(25%);
+  transition: 0.5s ease-in-out;
+}
+
+.gaslyPoster:hover .overlay {
+  opacity: 1;
+}
+
+.gaslyPosterText {
+  color: white;
+  font-size: 40px;
+  position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.sargeantPoster {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sargeantPoster img {
+  width: auto;
+  height: 500px;
+}
+
+.sargeantPoster:hover img {
+  filter: brightness(25%);
+  transition: 0.5s ease-in-out;
+}
+
+.sargeantPoster:hover .overlay {
+  opacity: 1;
+}
+
+.sargeantPosterText {
+  color: white;
+  font-size: 40px;
+  position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.marchessaultPoster {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marchessaultPoster img {
+  width: auto;
+  height: 500px;
+}
+
+.marchessaultPoster:hover img {
+  filter: brightness(25%);
+  transition: 0.5s ease-in-out;
+}
+
+.marchessaultPoster:hover .overlay {
+  opacity: 1;
+}
+
+.marchessaultPosterText {
+  color: white;
+  font-size: 40px;
+  position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.drawingContainer {
+  margin-top: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chapterDrawing {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chapterDrawing img {
+  width: auto;
+  height: 500px;
+}
+
+.chapterDrawing:hover img {
+  filter: brightness(25%);
+  transition: 0.5s ease-in-out;
+}
+
+.chapterDrawing:hover .overlay {
+  opacity: 1;
+}
+
+.chapterDrawingText {
+  color: white;
+  font-size: 40px;
+  position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.mugDrawing {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.mugDrawing img {
+  width: 500px;
+  height: auto;
+}
+
+.mugDrawing:hover img {
+  filter: brightness(25%);
+  transition: 0.5s ease-in-out;
+}
+
+.mugDrawing:hover .overlay {
+  opacity: 1;
+}
+
+.mugDrawingText {
+  color: white;
+  font-size: 40px;
+  position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.moaiDrawing {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moaiDrawing img {
+  width: auto;
+  height: 500px;
+}
+
+.moaiDrawing:hover img {
+  filter: brightness(25%);
+  transition: 0.5s ease-in-out;
+}
+
+.moaiDrawing:hover .overlay {
+  opacity: 1;
+}
+
+.moaiDrawingText {
+  color: white;
+  font-size: 40px;
+  position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.linkContainer {
+  color: white;
+  margin-top: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.link {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  text-decoration-line: underline;
+  text-shadow: 3px -1px 0 rgb(255, 0, 0), -3px 2px 0 rgba(0, 255, 255, 1);
+}
+
+/* .link:hover {
+  animation: glitchtext 2000ms linear infinite;
+} */
+
+.gaslyWebsiteImg {
+  background: url(gaslywebsite.jpg) no-repeat center;
+  background-size: contain;
+  width: 750px;
+  height: 400px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.bioPageContainer {
+  text-align: center;
+  margin: 0px 500px 75px 500px;
+}
+
+.bioPageTitle {
+  font-size: 50px;
+  color: white;
+  text-shadow: 5px -2px 0 rgb(255, 0, 0), -5px 2px 0 rgba(0, 255, 255, 1);
+}
+
+.bioPageDescription {
+  font-size: 25px;
+  color: white;
+  margin: 50px 0px 25px 0px;
+}
+
+.bioPageSubtitle {
+  color: white;
+  margin-top: 50px;
+}
+
+.bioPageText {
+  color: white;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(80, 80, 80);
+  height: 75px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "a" "b" "c" "d";
+  grid-gap: 200px;
+}
+
+svg {
+  fill: white;
+  scale: 2;
+  filter: drop-shadow(2px 2px 0.5px rgb(0, 0, 0));
+}
+
+.instagram:hover {
+  scale: 1.25;
+  animation: glitchsvg 2000ms none infinite;
+}
+
+.phone:hover {
+  scale: 1.25;
+  animation: glitchsvg 2000ms none infinite;
+}
+
+.email:hover {
+  scale: 1.25;
+  animation: glitchsvg 2000ms none infinite;
+}
+
+.linkedin:hover {
+  scale: 1.25;
+  animation: glitchsvg 2000ms none infinite;
+}
+
+.github:hover {
+  scale: 1.25;
+  animation: glitchsvg 2000ms none infinite;
+}
+
+.footerContainer {
+  background-color: rgb(80, 80, 80);
+  height: 125px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.mainFooter {
+  margin-right: 50px;
+  filter: drop-shadow(2px 2px 0 rgba(255, 0, 0, 1))
+    drop-shadow(-2px -2px 0 rgba(0, 255, 255, 1));
+}
+
+.contactTitle {
+  margin-bottom: 10px;
+}
+
+.contactContainer {
+  margin-bottom: 10px;
+}
+
+.heroCarousel {
+  width: 750px;
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  margin-right: 225px;
+  margin-left: 175px;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.5s;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.activeSlide {
+  opacity: 1;
+}
+
+.pastaSlide {
+  background-image: url(pastaMatchbox.jpg);
+  background-size: contain;
+  background-position: center;
+  width: 500px;
+}
+
+.gaslySlide {
+  background-image: url(gaslywebsite.jpg);
+  background-size: contain;
+  background-position: center;
+  width: 500px;
+}
+
+.hughesSlide {
+  background-image: url(hughesPoster.png);
+  background-size: contain;
+  background-position: center;
+  height: 500px;
+}
+
+.cardWebsitePreview {
+  height: 475px;
+  width: 750px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.gaslyWebsitePreview {
+  height: auto;
+  width: 1500px;
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+
+.formLink {
+  color: white;
+  text-decoration: underline;
+}
+
+
+.business-card{
+  width: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 25px;
+  margin-top: 25px;
+}
+
+.linkDescription{
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+    /* height:100vh; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "heroContainer"
+      "iconContainer"
+      "bioContainer"
+      "workContainer"
+      "footer";
+  }
+
+  .tabs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+  }
+
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    top: 0px;
+  }
+
+  .heroContainer {
+    grid-area: heroContainer;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    
+  }
+
+  .heroTitle {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    margin-left: 0px;
+    white-space: nowrap;
+    /* margin-left: 50vw; */
+  }
+
+  .heroSubtitle {
+    font-size: 30px;
+    margin-left: 0px;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .heroContent {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    border-radius: 0px;
+    background-color: rgba(41, 41, 41, 0);
+  }
+
+  .heroCarousel {
+    width: 100vw;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slide {
+    top: -50px;
+    scale: 0.6;
+    /* margin-left: 25px; */
+  }
+
+  .iconContainer {
+    grid-area: iconContainer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100vw;
+    grid-gap: 50px;
+    height: 100px;
+    padding-left: 0px;
+  }
+
+  .bioContainer {
+    /* margin-left: 0px; */
+    margin: 50px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    /* margin: 0 20px 0 20px; */
+  }
+
+  .bioDescription {
+    font-size: 17px;
+    margin: 5px 0 25px 0;
+    width: 300px;
+  }
+
+  .workContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .posterContainer {
+    grid-gap: 75px;
+  }
+
+  #work {
+    width: 100vw;
+    align-items: center;
+  }
+
+  .workTitle {
+    width: 100vw;
+    margin-top: 75px;
+    font-size: 35px;
+  }
+
+
+  .bioTitle{
+    font-size: 35px;
+  }
+  .matchboxContainer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pastaMatchbox img {
+    width: 90vw;
+    height: auto;
+  }
+
+  .posterContainer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .drawingContainer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mugDrawing img {
+    width: 90vw;
+    height: auto;
+  }
+
+  .linkContainer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-gap: 25px;
+    margin-top: 75px;
+  }
+
+  .gaslyWebsitePreview {
+    width: 100vw;
+    height: auto;
+  }
+
+  .cardWebsitePreview {
+    width: 100vw;
+    height: 475px;
+  }
+
+  .footerContainer {
+    margin-top: 50px;
+    height: 150px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mainFooter {
+    margin-right: 0px;
+    margin-top: 10px;
+  }
+
+  .gaslyWebsitePreview {
+    margin-bottom: 50px;
+  }
+
+  .workPic {
+    width: 100%;
+  }
+
+  .link{
+    font-size: 35px;
+  }
+
+  .linkDescription{
+    font-size: 20px;
+  }
+
+  .business-card{
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .business-card img{
+    width: 300px;
+}
+
+}
